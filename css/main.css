@@ -1,0 +1,21 @@
+html { 
+    height:100% 
+}
+
+body { 
+    height:100%; 
+    margin:0; 
+    padding:0 
+}
+#map_canvas {  
+    width:100%; 
+    height:100%
+}
+#controls {
+    position:fixed;
+    right:0; 
+    width:200px; 
+    height:200px; 
+    background:white; 
+    z-index:300;
+}
