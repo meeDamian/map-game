@@ -24,24 +24,13 @@ window.error = {
     document.getElementsByTagName('head')[0].appendChild( tmp );
     delete tmp;
 
-    // 2. Load PLAYER js
+    // 2. Load PLAYER(s) (and inventory) js
     var tmp = document.createElement('script');
     tmp.async = true;
     tmp.setAttribute('src','js/player.js');
     tmp.onerror = window.error.load;
     tmp.onload = function(){ 
         G.player.init(); 
-    };
-    document.getElementsByTagName('head')[0].appendChild( tmp );
-    delete tmp;
-
-    // 3. load player's INVENTORY js
-    var tmp = document.createElement('script');
-    tmp.async = true;
-    tmp.setAttribute('src','js/inventory.js');
-    tmp.onerror = window.error.load;
-    tmp.onload = function(){ 
-        G.inventory.init(); 
     };
     document.getElementsByTagName('head')[0].appendChild( tmp );
     delete tmp;
