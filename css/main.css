@@ -19,3 +19,34 @@ body {
     background:white; 
     z-index:300;
 }
+
+#account {
+    z-index:300;
+}
+
+#tab {
+    position:fixed;
+    display:block;
+    top:100px;
+    right:0;
+
+    width:65px;
+    height:25px;
+    background:white;
+    padding:5px;
+    font-size:20px;
+
+    border:4px #aaa solid;
+    border-radius:10px;
+
+    padding-left:15px;
+    margin-right:-10px;
+}
+
+#content {
+    position:fixed;
+    display:block;
+    width:250px;
+    height:500px;
+    margin:10px;
+}
