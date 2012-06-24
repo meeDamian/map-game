@@ -7,6 +7,7 @@ window.error = {
 };
 
 function constructGame() {
+    console.log( document.getElementById('tab') );
 
     game.options = {
         login: {
@@ -14,28 +15,24 @@ function constructGame() {
             show:function( O ) {
                 var $acc = $('#account'),
                     $tab = $('#tab'),
-                    $con = $('#content');
+                    $con = $('#content'),
+                    o = {};
 
-                    var o = {};
-                    if( O.horizontal==-1 ) o.left = 0;
-                    else if( O.horizontal==0 ) o.left=(game.options.window.width-$con.width())/2+"px";
-                    else if( O.horizontal==1 ) o.right = 0;
+                if( O.horizontal==-1 ) o.left = 0;
+                else if( O.horizontal==0 ) o.left=(game.options.window.width-$con.width())/2+"px";
+                else if( O.horizontal==1 ) o.right = 0;
 
-                    if( O.vertical==-1 ) o.top = 0;
-                    else if( O.vertical==0 ) o.top =(game.options.window.height-$con.height())/2+"px";// TODO: check if all window fits in that case
-                    else if( O.vertical==1 ) o.bottom = 0;
+                if( O.vertical==-1 ) o.top = 0;
+                else if( O.vertical==0 ) o.top =(game.options.window.height-$con.height())/2+"px";// TODO: check if all window fits in that case
+                else if( O.vertical==1 ) o.bottom = 0;
 
-                    O = $.extend({ top:"", right: "", bottom:"", left: "" }, o);
-
-                // TODO: animate tab to hide
+                O = $.extend({ top:"", right: "", bottom:"", left: "" }, o);
 
                 $tab.hide();
 
+                for(prep in O) $con.css( prep, O[prep] );
 
-
-                $con.css('background','white');
-
-                for(prep in O) $con.css(prep, O[prep]);
+                if(!game.options.fb.loaded && !game.options.fb.requested ) game.options.fb.load();
                 
 
                 // last line:
@@ -51,6 +48,43 @@ function constructGame() {
             refresh:function() {
                 this.height = window.innerHeight;
                 this.width = window.innerWidth;
+            }
+        },
+        fb: {
+            requested:false,
+            loaded:false,
+            load:function(){
+                this.requested = true;
+
+                var tmp = document.createElement('div'),
+                    dad = document.getElementsByTagName('body')[0];
+                tmp.setAttribute('id', 'fb-root');
+                dad.insertBefore( tmp, dad.firstChild );
+
+                tmp = document.createElement('script');
+                tmp.src = "//connect.facebook.net/en_US/all.js";
+                tmp.id = "facebook-jssdk";
+                tmp.async = true;
+                tmp.onerror = window.error.load;
+                tmp.onload = function(){ 
+                     console.log("facebook loaded");
+                };
+                document.getElementsByTagName('head')[0].appendChild( tmp );
+                delete tmp;
+
+                window.fbAsyncInit = game.options.fb.init;
+
+
+            },
+            init:function(){
+                console.log("facebook init");
+                FB.init({
+                    appId:'xxx',
+                    channelUrl:'',
+                    status:'',
+                    cookie:'',
+                    xfbml:''
+                });
             }
         }
     };
@@ -81,9 +115,6 @@ function constructGame() {
 
             game.options.login.show( O );
         }
-
-
-
     }, false);
     
 }
@@ -98,20 +129,21 @@ function constructGame() {
     // 1. load BACKGROUND js
     var tmp = document.createElement('script');
     tmp.async = true;
-    tmp.setAttribute('src','js/background.js');
+    tmp.src = 'js/background.js';
     tmp.onerror = window.error.load;
     tmp.onload = function(){ 
+        console.log("background loaded!");
         G.background.init(); 
     };
     document.getElementsByTagName('head')[0].appendChild( tmp );
-    delete tmp;
 
     // 2. Load PLAYER(s) (and inventory) js
-    var tmp = document.createElement('script');
+    tmp = document.createElement('script');
     tmp.async = true;
-    tmp.setAttribute('src','js/player.js');
+    tmp.src = 'js/player.js';
     tmp.onerror = window.error.load;
     tmp.onload = function(){ 
+        console.log("player loaded!");
         G.player.init(); 
     };
     document.getElementsByTagName('head')[0].appendChild( tmp );

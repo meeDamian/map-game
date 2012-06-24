@@ -10,7 +10,7 @@
 
     <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyACEjHhIEvtYSF7lCrcJhJrgRB3hsvPWyE&sensor=true"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/main.js" async="true"></script>
 
 </head>
 <body>
@@ -28,7 +28,8 @@
             <div>
                 <h3>Zaloguj!</h3>
                 <div>Google!</div>
-                <div>Facebook!</div>
+                <div class="fb-registration" data-fields="[{'name':'name'},{'email':'email'}]" data-redirect-uri="//30d.pl/maps?444">
+                </div>
                 <div>Standard!</div>
 
             </div>

@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"con",
+				"console"
+			],
+			[
+				"re",
+				"requested"
+			],
+			[
 				"Map",
 				"MapTypeId"
 			],
@@ -26,10 +34,6 @@
 			[
 				"li",
 				"lineTo"
-			],
-			[
-				"re",
-				"receiveMessage"
 			]
 		]
 	},
@@ -71,7 +75,7 @@
 			"file": "index.htm",
 			"settings":
 			{
-				"buffer_size": 774,
+				"buffer_size": 1228,
 				"line_ending": "Unix"
 			}
 		},
@@ -79,15 +83,7 @@
 			"file": "js/main.js",
 			"settings":
 			{
-				"buffer_size": 2175,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "css/main.css",
-			"settings":
-			{
-				"buffer_size": 565,
+				"buffer_size": 4510,
 				"line_ending": "Unix"
 			}
 		},
@@ -96,6 +92,14 @@
 			"settings":
 			{
 				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/main.css",
+			"settings":
+			{
+				"buffer_size": 708,
 				"line_ending": "Unix"
 			}
 		},
@@ -140,9 +144,10 @@
 	},
 	"file_history":
 	[
-		"/mnt/30d/var/www/30d/maps/js/inventory.js",
-		"/home/maurycy/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+		"/mnt/30d/var/www/30d/maps/css/main.css",
 		"/home/maurycy/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
+		"/home/maurycy/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+		"/mnt/30d/var/www/30d/maps/js/inventory.js",
 		"/mnt/30d/var/www/30d/node/chat.js",
 		"/mnt/30d/var/www/30d/node/srv.js",
 		"/mnt/30d/var/www/30d/node/index.js"
@@ -163,6 +168,18 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"al",
+			"aj\n",
+			" $",
+			"  &&  ",
+			"else if(  ",
+			"else if( (",
+			"h33",
+			"h",
+			"w33",
+			"w",
+			"w3",
+			"tab",
 			"wrap",
 			"\nwrap"
 		],
@@ -172,6 +189,12 @@
 		"regex": false,
 		"replace_history":
 		[
+			"",
+			"h1",
+			"h3",
+			"w1",
+			"w3",
+			"w1"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -300,15 +323,15 @@
 					"file": "index.htm",
 					"settings":
 					{
-						"buffer_size": 774,
+						"buffer_size": 1228,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								702,
-								702
+								460,
+								460
 							]
 						],
 						"settings":
@@ -329,15 +352,15 @@
 					"file": "js/main.js",
 					"settings":
 					{
-						"buffer_size": 2175,
+						"buffer_size": 4510,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								399,
-								399
+								322,
+								322
 							]
 						],
 						"settings":
@@ -355,39 +378,11 @@
 			]
 		},
 		{
-			"selected": 0,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 6,
-					"file": "css/main.css",
-					"settings":
-					{
-						"buffer_size": 565,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								491,
-								491
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
 					"file": "js/multiplayer.js",
 					"settings":
 					{
@@ -408,6 +403,34 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "css/main.css",
+					"settings":
+					{
+						"buffer_size": 708,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								262,
+								262
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 102.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -452,8 +475,8 @@
 						"selection":
 						[
 							[
-								190,
-								190
+								525,
+								525
 							]
 						],
 						"settings":
@@ -499,7 +522,7 @@
 		"cols":
 		[
 			0.0,
-			0.4203125,
+			0.527604166667,
 			1.0
 		],
 		"rows":
@@ -511,7 +534,7 @@
 	"menu_visible": true,
 	"replace":
 	{
-		"height": 0.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":
